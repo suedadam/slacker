@@ -3,6 +3,7 @@ package slacker
 import (
 	"fmt"
 	"regexp"
+	"strings"
 )
 
 // Bot is the basic type for defining a simple chat bot.
@@ -48,7 +49,7 @@ func (b *Bot) run() {
 		if message["text"] == nil || message["channel"] == nil || message["user"] == nil {
 			continue
 		}
-		text := message["text"].(string)
+		text := strings.ToUpper(message["text"].(string))
 		channel := message["channel"].(string)
 		user := message["user"].(string)
 

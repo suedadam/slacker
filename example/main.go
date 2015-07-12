@@ -21,7 +21,7 @@ func main() {
 		return
 	}
 
-	bot.RespondWith("whats up dog", func(user string, matchParts []string) string {
+	bot.RespondWith("WHATS UP DOG", func(user string, matchParts []string) string {
 		return "not much, you?"
 	})
 
